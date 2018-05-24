@@ -4,6 +4,9 @@ const app = getApp()
 
 Page({
   data: {
+    scale: 17,
+    latitude: 0,
+    longitude: 0,
     mapCtx: null,
     mapControls: [
       {
@@ -64,10 +67,59 @@ Page({
     ]
   },
   onLoad: function () {
-    this.setUpMap();
+    wx.getLocation({
+        type: "gcj02",
+        success: (res) => {
+            this.setData({
+                longitude: res.longitude,
+                latitude: res.latitude,
+            });
+            this.getNearby();
+        }
+    })
   },
-  setUpMap: function () {
+  getNearby: function(){
+    //   console.log(this.data.latitude);
+    //   console.log(this.data.longitude);
 
+      wx.request({
+          url: app.config.apiServer + 'api/location/get_nearby_locations',
+          data: {
+              latitude: this.data.latitude,
+              longitude: this.data.longitude,
+          },
+          method: 'GET',
+          success: (res) => {
+              var ret = res.data;
+              if (!(ret && ret.code && ret.code === 200)) {
+                wx.showModal({
+                    title: '地点错误',
+                    content: '你只能吃屎了我说实话',
+                    showCancel: false
+                });
+              }
+              console.log(ret);
+              var markerInfo = [];
+              for (let it in ret.data.locations) {
+                  let ititem = ret.data.locations[it];
+                  let item = {
+                      id: ititem.id,
+                      title: ititem.name,
+                      latitude: ititem.latitude,
+                      longitude: ititem.longitude,
+                      iconPath: "/images/device_marker.png",
+                      width: 40,
+                      height: 40,
+
+                  };
+                  markerInfo.push(item);
+              }
+              //console.log(markerInfo);
+              this.setData({
+                  markers: markerInfo
+              })
+          }
+      })
   },
   onReady: function (e) {
     this.mapCtx = wx.createMapContext('main-map');
@@ -105,5 +157,10 @@ Page({
         })
       }
     });
+  },
+  onMapRegionChange: function(e){
+     if (e.type == "end") {
+          this.getNearby();
+      }
   }
 })

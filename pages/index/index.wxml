@@ -4,5 +4,5 @@
     <image src='/images/icon_announce.svg'></image>
     <text bindtap='tipOnclick'>每日免费领纸10次，更有机会抽奖哦！</text>
   </view>
-  <map id="main-map" class='map' controls='{{mapControls}}' bindcontroltap='onMapControlTap' show-location='true'></map>
+  <map id="main-map" class='map' latitude="{{latitude}}" longitude="{{longitude}}" controls='{{mapControls}}' bindregionchange="onMapRegionChange" markers="{{markers}}" bindmarkertap="onMapMarkerTap" bindcontroltap='onMapControlTap' show-location='true'></map>
 </view>
