@@ -4,9 +4,11 @@ const app = getApp()
 
 Page({
   data: {
-    scale: 17,
+    scale: 18,
     latitude: 0,
     longitude: 0,
+    queryLatitude:0,
+    queryLongitude:0,
     mapCtx: null,
     mapControls: [
       {
@@ -73,20 +75,22 @@ Page({
             this.setData({
                 longitude: res.longitude,
                 latitude: res.latitude,
+                queryLongitude: res.longitude,
+                queryLatitude: res.latitude,
             });
             this.getNearby();
         }
     })
   },
   getNearby: function(){
-    //   console.log(this.data.latitude);
-    //   console.log(this.data.longitude);
+      console.log(this.data.queryLatitude);
+      console.log(this.data.queryLongitude);
 
       wx.request({
           url: app.config.apiServer + 'api/location/get_nearby_locations',
           data: {
-              latitude: this.data.latitude,
-              longitude: this.data.longitude,
+              latitude: this.data.queryLatitude,
+              longitude: this.data.queryLongitude,
           },
           method: 'GET',
           success: (res) => {
@@ -160,7 +164,17 @@ Page({
   },
   onMapRegionChange: function(e){
      if (e.type == "end") {
-          this.getNearby();
+         this.mapCtx.getCenterLocation({
+             success: (res) => {
+                //  console.log(res.longitude)
+                //  console.log(res.latitude)
+                 this.setData({
+                     queryLatitude: res.latitude,
+                     queryLongitude: res.longitude
+                 });
+                 this.getNearby();
+             }
+         })
       }
-  }
+  },
 })
