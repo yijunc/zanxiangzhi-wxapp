@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    scale: 17,
+    scale: 18,
     latitude: 0,
     longitude: 0,
     queryLatitude:0,
