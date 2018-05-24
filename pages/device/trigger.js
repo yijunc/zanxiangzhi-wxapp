@@ -48,9 +48,11 @@ Page({
           }else{
             var errMsg = '获取厕纸失败，请重试~';
             switch(ret.code){
-              case 400:
-                errMsg = '获取厕纸失败，请重试~';
+              case 401:
+                errMsg = '抱歉，纸盒机暂时不可用~~~';
                 break;
+              case 402:
+                errMsg = '您今日的免费获取次数已经用完了';
               default:
                 break;
             }

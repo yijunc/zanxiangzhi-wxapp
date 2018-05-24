@@ -28,16 +28,40 @@ App({
     });
     var uid = wx.getStorageSync('uid');
     var apiToken = wx.getStorageSync('apiToken');
-    if (uid && apiToken && this.checkApiToken(uid, apiToken)){
-      this.globalData.uid = uid;
-      this.globalData.apiToken = apiToken;
-      wx.hideLoading();
+    if (uid && apiToken){
+      this.checkApiToken(uid, apiToken, (success)=>{
+        if(success){
+          this.globalData.uid = uid;
+          this.globalData.apiToken = apiToken;
+        }else{
+          this.login();
+        }
+        wx.hideLoading();
+      });
     }else{
       this.login();
     }
   },
-  checkApiToken: function(uid, apiToken){
-    return false;
+  checkApiToken: function(uid, apiToken, func){
+    wx.request({
+      url: this.config.apiServer + 'api/user/verify_token',
+      method: 'GET',
+      data: {
+        uid: this.globalData.uid,
+        api_token: this.globalData.apiToken
+      },
+      success: res => {
+        var ret = res.data;
+        if(ret && ret.code && ret.code == 200){
+          if(func){func(true);}
+        }else{
+          if (func) {func(false);}
+        }
+      },
+      fail: res => {
+        if(func) {func(false);}
+      }
+    })
   },
   login: function(){
     wx.showLoading({
