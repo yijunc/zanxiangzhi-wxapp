@@ -1,0 +1,90 @@
+/* pages/device/trigger.wxss */
+page{
+  background-color: #fff;
+}
+
+.container{
+  background-color: #fff;
+  height: 100vh;
+}
+
+.info-icon{
+  width: 380rpx;
+  height: 248rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 140rpx;
+}
+
+.info-icon image{
+  width: 100%;
+  height: 100%;
+}
+
+.info-text{
+
+}
+
+.info-text-title{
+  width: 100%;
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 50rpx;
+  color: #000;
+}
+
+.info-text-subtitle{
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 28rpx;
+  color: #666666;
+}
+
+.return-btn{
+  margin-top: 50rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #DEE2E5;
+  width: 120rpx;
+  height: 58rpx;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all .3s;
+}
+
+.return-btn text{
+  font-size: 29rpx;
+  margin: 10rpx auto;
+  display: block;
+  text-align: center;
+  color: #344A71;
+}
+
+.return-btn:active{
+  border: 1rpx solid #7ED1F3;
+  background-color: #F4F9FC;
+  transition: all .01s;
+}
+
+
+.report-device{
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  color: #9AB2CC;
+  margin-top: 30vh;
+}
+
+.report-device navigator{
+  color: #F7CA0F;
+  display: inline;
+}
+
+.footer{
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 40rpx;
+  padding-bottom: 37rpx;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 50%);
+}

@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/device/device",
+    "pages/device/report",
+    "pages/device/trigger",
+    "pages/extra/link"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "赞享纸",
+    "navigationBarTextStyle": "black"
+  }
+}

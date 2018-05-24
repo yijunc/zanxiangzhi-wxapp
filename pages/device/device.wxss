@@ -1,0 +1,143 @@
+/* pages/device/device.wxss */
+page{
+  background-color: #E9F1F4;
+}
+
+.container{
+  background-color: #E9F1F4;
+  height: 100vh;
+}
+
+.sub-body-1{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20rpx;
+  margin-top: 1.5vh;
+  height: 20vh;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 5;
+}
+
+.sub-body-2{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20rpx;
+  margin-top: 3vh;
+  height: 20vh;
+  width: 76%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 7;
+}
+
+.body{
+  position: absolute;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 4.7vh;
+  height: 86vh;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+  box-shadow: 0 10rpx 50rpx rgba(0, 0, 0, 0.02);
+}
+
+.body .icon{
+  margin-top: 8vh;
+  width: 260rpx;
+  height: 260rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body .icon image{
+  width: 100%;
+  height: 100%;
+}
+
+.body .left-times{
+  margin-top: 3vh;
+  text-align: center;
+  color: #344A71;
+  font-size: 33rpx;
+  font-weight: 300;
+}
+
+.body .left-times .bottom{
+  margin-top: 20rpx;
+}
+
+.body .left-times .left-times-num{
+  margin-right: 10rpx;
+  color: #0A9EFF;
+  font-size: 70rpx;
+}
+
+.body .get-it-btn{
+  margin-top: 50rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #DEE2E5;
+  width: 250rpx;
+  height: 70rpx;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all .3s;
+}
+
+.body .get-it-btn:active{
+  border: 1rpx solid #7ED1F3;
+  background-color: #F4F9FC;
+  transition: all .01s;
+}
+
+.body .get-it-btn image{
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  margin: 17rpx 17rpx 17rpx 25rpx;
+}
+
+.body .get-it-btn text{
+  float: left;
+  font-size: 29rpx;
+  margin: 17rpx;
+  color: #344A71;
+}
+
+.body-footer{
+  position: absolute;
+  margin-top: 71vh;
+  width: 86%;
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F8FAF9;
+  z-index: 20;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.body-footer-inner{
+  padding: 20rpx;
+}
+
+.body-footer .line::before{
+  position: relative;
+  content: '● ';
+  font-size: 18rpx;
+  top: -2.2rpx;
+}
+
+.body-footer .line{
+  margin: 15rpx;
+  color: #9AB2CC;
+  font-size: 27rpx;
+}
+
+.body-footer .line navigator{
+  color: #F7CA0F;
+  display: inline;
+}

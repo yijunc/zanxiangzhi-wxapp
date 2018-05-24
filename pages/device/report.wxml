@@ -1,0 +1,32 @@
+<!--pages/device/report.wxml-->
+<view class="container">
+  <form class='form' bindsubmit="formSubmit" bindreset="formReset">
+    <view class='form-box'>
+      <view class='form-box-title'>纸盒机ID</view>
+      <input name='id' class='form-box-field' type='text' disabled='true' value='2'></input>
+    </view>
+    <view class='form-box'>
+      <view class='form-box-title'>地址</view>
+      <input name='address' class='form-box-field' type='text' value='上海市普陀区中山北路36...'></input>
+    </view>
+    <view class='form-box'>
+      <view class='form-box-title vertical'>照片</view>
+      <view class='form-box-pics'>
+        <view wx:for="{{uploadPics}}" class='upload-pic'>
+          <view class='cancel-btn'><image data-src='{{item}}' bindtap='imageCancelOnclick' src='/images/cancel_btn.svg'></image></view>
+          <image data-src='{{item}}' src='{{item}}' bindtap='imageOnClick'></image>
+        </view>
+        <view class='add-pic-btn' bindtap='onAddPicBtnClick'>
+          <image src='/images/report_add_pic.svg'></image>
+        </view>
+      </view>
+    </view>
+    <view class='form-box'>
+      <view class='form-box-title vertical'>详情</view>
+      <textarea name='desc' class='form-box-field-verical' placeholder='吐槽一下吧~' placeholder-class='form-box-field-placeholder' auto-height='true' maxlength='250'></textarea>
+    </view>
+    <view class='footer-btn'>
+      <button form-type='submit'>立即提交</button>
+    </view>
+  </form>
+</view>

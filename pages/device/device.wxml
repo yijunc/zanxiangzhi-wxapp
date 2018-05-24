@@ -1,0 +1,28 @@
+<!--pages/device/device.wxml-->
+<view class='container'>
+  <view animation='{{bodyAnimation}}' class='sub-body-1'>
+  </view>
+  <view animation='{{bodyAnimation}}' class='sub-body-2'>
+  </view>
+  <view animation='{{bodyAnimation}}' class='body'>
+    <view class='icon'>
+      <image src='/images/device_icon.png'></image>
+    </view>
+    <view class='left-times'>
+      <view><text>今日还可免费领取</text></view>
+      <view class='bottom'><text class='left-times-num'>{{leftTimes}}</text><text>次</text></view>
+    </view>
+    <view class='get-it-btn' bindtap='onGetBtnOnclick'>
+      <image src='/images/device_thumbs_up.png'></image>
+      <text>点赞秒领</text>
+    </view>
+  </view>
+  <view animation='{{bodyAnimation}}' class='body-footer'>
+    <view class='body-footer-inner'>
+      <view class='line'>纸盒机设备ID：{{deviceId}} （<navigator url='/pages/device/report?id={{deviceId}}'>报修</navigator>）</view>
+      <view class='line'>每位用户每日最多免费领取10次</view>
+      <view class='line'>温馨提醒：在享受便利的同时，请您爱惜公共资源</view>
+    </view>
+  </view>
+  <view class='footer'>上海珺柠网络科技有限公司</view>
+</view>

@@ -1,0 +1,28 @@
+/**index.wxss**/
+.container{
+  height: 100%;
+  overflow-y:hidden;
+}
+.tips{
+  height: 80rpx;
+  width: 100%;
+  background-color: #F4F9FC;
+  color: #7ED1F3;
+}
+.tips image{
+  float: left;
+  height: 40rpx;
+  width: 40rpx;
+  margin: 20rpx;
+}
+.tips text{
+  padding: 20rpx 0;
+  float: left;
+  font-size: 28rpx;
+}
+.map{
+  position: absolute;
+  margin-top: 80rpx;
+  width: 100%;
+  height: 94vh;
+}

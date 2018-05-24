@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='tips'>
+    <image src='/images/icon_announce.svg'></image>
+    <text bindtap='tipOnclick'>每日免费领纸10次，更有机会抽奖哦！</text>
+  </view>
+  <map id="main-map" class='map' controls='{{mapControls}}' bindcontroltap='onMapControlTap' show-location='true'></map>
+</view>

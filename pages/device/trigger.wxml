@@ -1,0 +1,35 @@
+<!--pages/device/trigger.wxml-->
+<view class='container'>
+  <view wx:if="{{loading==false && success==true}}" class='body-success'>
+    <view class='info-icon'><image src='/images/device_done.png'></image></view>
+    <view class='info-text'>
+      <view class='info-text-title'>
+        等待出纸
+      </view>
+      <view class='info-text-subtitle'>
+        已有<text>{{thumbs_up_count}}</text>次点赞
+      </view>
+    </view>
+    <view class='report-device'>
+      未正常出纸？<navigator url='/pages/device/report?id={{deviceId}}'>报修</navigator>
+    </view>
+  </view>
+  <view wx:if="{{loading==false && success==false}}" class='body-failed'>
+    <view class='info-icon'><image src='/images/device_failed.png'></image></view>
+    <view class='info-text'>
+      <view class='info-text-title'>
+        粗错啦
+      </view>
+      <view class='info-text-subtitle'>
+        您今天的免费领取次数已经用完了
+      </view>
+      <view class='return-btn' bindtap='onReturnBtnOnclick'>
+        <text>返回</text>
+      </view>
+    </view>
+    <view class='report-device'>
+      未正常出纸？<navigator url='/pages/device/report?id={{deviceId}}'>报修</navigator>
+    </view>
+  </view>
+  <view class='footer'>上海珺柠网络科技有限公司</view>
+</view>
