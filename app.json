@@ -4,7 +4,8 @@
     "pages/device/device",
     "pages/device/report",
     "pages/device/trigger",
-    "pages/extra/link"
+    "pages/extra/link",
+    "pages/index/location"
   ],
   "window": {
     "backgroundTextStyle": "light",

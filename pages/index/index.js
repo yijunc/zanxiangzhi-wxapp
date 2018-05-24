@@ -75,7 +75,7 @@ Page({
   },
   tipOnclick: function () {
     wx.navigateTo({
-      url: '/pages/device/device?id=2'
+      url: '/pages/device/device?id=1'
     })
   },
   onMapControlTap: function(e){

@@ -21,7 +21,7 @@
         粗错啦
       </view>
       <view class='info-text-subtitle'>
-        您今天的免费领取次数已经用完了
+        {{errorMsg}}
       </view>
       <view class='return-btn' bindtap='onReturnBtnOnclick'>
         <text>返回</text>

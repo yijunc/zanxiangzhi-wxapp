@@ -17,6 +17,7 @@ Page({
   onLoad: function (options) {
     if(options.id){
       this.setData({deviceId: options.id});
+      this.getLeftTimes();
     }else{
       wx.showModal({
         title: '粗错啦',
@@ -31,7 +32,32 @@ Page({
     }
     //this.setData({deviceId, })
   },
-
+  getLeftTimes: function(){
+    wx.showLoading({
+      title: '拼命加载中',
+      mask: true
+    })
+    wx.request({
+      url: app.config.apiServer + "api/user/get_left_times",
+      method: 'get',
+      data: {
+        uid: app.globalData.uid,
+        api_token: app.globalData.apiToken
+      },
+      success: res => {
+        wx.hideLoading();
+        var ret = res.data;
+        if(ret && ret.code && ret.code === 200){
+          this.setData({
+            leftTimes: ret.data.left_times
+          });
+        }
+      },
+      fail: res=>{
+        wx.hideLoading();
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
