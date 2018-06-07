@@ -155,10 +155,16 @@ Page({
     wx.scanCode({
       onlyFromCamera: true,
       success: (res) => {
-        console.log(res)
-        wx.navigateTo({
-          url: '/pages/device/device?id=1',
-        })
+        if(res && res.result){
+          let link = res.result;
+          if (link.indexOf(app.config.qrCodeStartWith) === 0){
+            let id = link.substr(app.config.qrCodeStartWith.length);
+            wx.navigateTo({
+              url: '/pages/device/device?id=' + id,
+            })
+          }
+        }
+        
       }
     });
   },
