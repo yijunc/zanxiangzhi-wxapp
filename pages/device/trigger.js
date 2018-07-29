@@ -43,7 +43,8 @@ Page({
           if(ret.code === 200){
             this.setData({
               success: true,
-              loading: false
+              loading: false,
+              thumbs_up_count: ret.data.thumbs_up_count
             })
           }else{
             var errMsg = '获取厕纸失败，请重试~';

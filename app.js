@@ -134,7 +134,8 @@ App({
     winHeight: null
   },
   config: {
-      apiServer: 'http://47.100.228.168:5200/',
-      wsServer: 'ws://47.100.228.168:5200/',
+    apiServer: 'http://47.100.228.168:5200/',
+    wsServer: 'ws://47.100.228.168:5200/',
+    qrCodeStartWith: 'https://www.zanxiangzhi.com/device/'
   }
 })
