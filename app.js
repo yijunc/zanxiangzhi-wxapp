@@ -134,7 +134,7 @@ App({
     winHeight: null
   },
   config: {
-    apiServer: 'http://172.31.234.46:8000/',
-    wsServer: 'ws://172.31.234.46:8000/',
+      apiServer: 'http://47.100.228.168:5200/',
+      wsServer: 'ws://47.100.228.168:5200/',
   }
 })
