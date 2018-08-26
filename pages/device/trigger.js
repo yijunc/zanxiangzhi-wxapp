@@ -10,20 +10,22 @@ Page({
     success: true,
     thumbs_up_count: 0,
     deviceId: null,
+    activationPeriod: 5,
     errorMsg: '获取厕纸失败，请重试~'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.setData({
-      deviceId: options.id
+      deviceId: options.id,
+      activationPeriod: options.period,
     });
     this.activateDevice();
   },
-  
-  activateDevice: function(){
+
+  activateDevice: function() {
     wx.showLoading({
       title: '拼命加载中',
       mask: true
@@ -34,21 +36,22 @@ Page({
       data: {
         uid: app.globalData.uid,
         api_token: app.globalData.apiToken,
-        device_id: this.data.deviceId
+        device_id: this.data.deviceId,
+        period: this.data.activationPeriod,
       },
       success: res => {
         wx.hideLoading();
         var ret = res.data;
-        if(ret && ret.code){
-          if(ret.code === 200){
+        if (ret && ret.code) {
+          if (ret.code === 200) {
             this.setData({
               success: true,
               loading: false,
               thumbs_up_count: ret.data.thumbs_up_count
             })
-          }else{
+          } else {
             var errMsg = '获取厕纸失败，请重试~';
-            switch(ret.code){
+            switch (ret.code) {
               case 401:
                 errMsg = '抱歉，纸盒机暂时不可用~~~';
                 break;
@@ -63,7 +66,7 @@ Page({
               loading: false
             })
           }
-        }else{
+        } else {
           this.setData({
             errorMsg: "服务器抽风啦啊啊啊~~~",
             success: false,
@@ -85,18 +88,18 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
-  
-  onReturnBtnOnclick: function(){
+
+  onReturnBtnOnclick: function() {
     wx.navigateBack();
   }
 

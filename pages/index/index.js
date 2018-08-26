@@ -98,7 +98,7 @@ Page({
               if (!(ret && ret.code && ret.code === 200)) {
                 wx.showModal({
                     title: '地点错误',
-                    content: '你只能吃屎了我说实话',
+                    content: '请确保手机定位已经开启',
                     showCancel: false
                 });
               }

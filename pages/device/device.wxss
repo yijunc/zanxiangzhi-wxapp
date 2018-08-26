@@ -46,9 +46,9 @@ page{
 }
 
 .body .icon{
-  margin-top: 8vh;
+  margin-top: 5vh;
   width: 260rpx;
-  height: 260rpx;
+  height: 25%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -59,7 +59,7 @@ page{
 }
 
 .body .left-times{
-  margin-top: 3vh;
+  margin-top: 2vh;
   text-align: center;
   color: #344A71;
   font-size: 33rpx;
@@ -74,6 +74,17 @@ page{
   margin-right: 10rpx;
   color: #0A9EFF;
   font-size: 70rpx;
+}
+
+.body .time-slider{
+  margin-top: 2vh;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #344A71;
+  width: 90%;
+  font-size: 25rpx;
+  font-weight: 300;
 }
 
 .body .get-it-btn{
@@ -109,9 +120,9 @@ page{
 
 .body-footer{
   position: absolute;
-  margin-top: 71vh;
+  margin-top: 74vh;
   width: 86%;
-  height: 20vh;
+  height: 17vh;
   margin-left: auto;
   margin-right: auto;
   background-color: #F8FAF9;
