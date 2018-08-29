@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/device/device",
-    "pages/device/report",
     "pages/device/trigger",
     "pages/extra/link",
-    "pages/index/location"
+    "pages/index/location",
+    "pages/device/report"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -21,6 +21,7 @@
   border-radius: 10rpx;
   display: block;
   transition: all .5s ease-out;
+  /* flex-direction: row; */
 }
 
 .form-box-title{
@@ -28,6 +29,7 @@
   float: left;
   font-size: 31rpx;
   color: #939393;
+  width: 20%;
 }
 
 .form-box-title.vertical{
@@ -39,6 +41,7 @@
   text-align: right;
   font-size: 28rpx;
   margin: 30rpx;
+  width: 60%;
   padding-right: 15rpx;
 }
 
