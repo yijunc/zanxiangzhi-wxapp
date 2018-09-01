@@ -3,7 +3,7 @@
   <form class='form' bindsubmit="formSubmit" bindreset="formReset">
     <view class='form-box'>
       <view class='form-box-title'>纸盒机ID</view>
-      <input name='id' class='form-box-field' type='text' disabled='true' value='2'></input>
+      <input name='id' class='form-box-field' type='text' disabled='true' value='{{deviceId}}'></input>
     </view>
     <view class='form-box'>
       <view class='form-box-title'>地址</view>

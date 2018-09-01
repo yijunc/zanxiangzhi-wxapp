@@ -22,7 +22,7 @@
                 <text>选择出纸时长：{{activationPeriod}}秒</text>
             </view>
             <view class="body-view">
-                <slider bindchanging="onActivationChange" step="1" min="5" max="10" 
+                <slider bindchanging="onActivationChange" step="1" min="5" max="9" 
                 activeColor="#0A9EFF" block-size="23"/>
             </view>
         </view>

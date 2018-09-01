@@ -52,6 +52,7 @@ Page({
       })
     }
   },
+  
   imageCancelOnclick: function(event){
     if (event && event.target && event.target.dataset && event.target.dataset.src) {
       var index = this.data.uploadPics.indexOf(event.target.dataset.src);
