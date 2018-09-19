@@ -136,6 +136,6 @@ App({
   config: {
     apiServer: 'http://47.100.228.168:5200/',
     wsServer: 'ws://47.100.228.168:5200/',
-    qrCodeStartWith: 'http://www.zanxiangzhi.com/device/'
+    qrCodeStartWith: 'https://www.zanxiangzhi.com/device/'
   }
 })
