@@ -18,6 +18,25 @@ Page({
     })
   },
 
+  jiade: function(){
+    wx.showLoading({
+      title: '上传中',
+    })
+    setTimeout(()=>{
+      wx.hideLoading();
+      wx.showModal({
+        title: '成功',
+        content: '管理员正在飞速赶来~~~',
+
+      });
+      wx.navigateBack({
+
+      });
+    }, 200 + Math.random() * 1500); 
+    
+    
+  },
+
   onAddPicBtnClick: function(){
     wx.chooseImage({
       success: (res) => {

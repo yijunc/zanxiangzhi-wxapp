@@ -26,7 +26,7 @@
       <textarea name='desc' class='form-box-field-verical' placeholder='吐槽一下吧~' placeholder-class='form-box-field-placeholder' auto-height='true' maxlength='250'></textarea>
     </view>
     <view class='footer-btn'>
-      <button form-type='submit'>立即提交</button>
+      <button form-type='submit' bindtap='jiade'>立即提交</button>
     </view>
   </form>
 </view>

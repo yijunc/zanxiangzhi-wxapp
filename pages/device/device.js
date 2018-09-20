@@ -8,7 +8,7 @@ Page({
     data: {
         leftTimes: 10,
         deviceId: 1,
-        activationPeriod: 5,
+        activationPeriod: 1,
         bodyAnimation: {}
     },
 
@@ -16,6 +16,16 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        if (options["q"] != null){
+          let {q:link} = options;
+          link = decodeURIComponent(link);
+          let id;
+          if (link.indexOf(app.config.qrCodeStartWith) === 0) {
+            id = link.substr(app.config.qrCodeStartWith.length);
+          }
+          options.id = id;
+          // console.log(id);
+        }
         if (options.id) {
             this.setData({
                 deviceId: options.id

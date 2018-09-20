@@ -74,7 +74,7 @@ App({
       },
       fail: res => {
         wx.hideLoading();
-        loginFailed();
+        this.loginFailed();
       }
     })
   },
@@ -106,7 +106,7 @@ App({
         wx.setStorageSync('uid', this.globalData.uid);
         wx.setStorageSync('apiToken', this.globalData.apiToken);
       }else{
-        loginFailed();
+        this.loginFailed();
       }
     }
   },
@@ -134,8 +134,8 @@ App({
     winHeight: null
   },
   config: {
-    apiServer: 'http://47.100.228.168:5200/',
-    wsServer: 'ws://47.100.228.168:5200/',
+    apiServer: 'https://www.zanxiangzhi.com/',
+    wsServer: 'wss://www.zanxiangzhi.com/',
     qrCodeStartWith: 'https://www.zanxiangzhi.com/device/'
   }
 })
