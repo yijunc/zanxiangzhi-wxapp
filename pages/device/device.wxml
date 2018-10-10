@@ -14,7 +14,7 @@
             </view>
             <view class='bottom'>
                 <text class='left-times-num'>{{leftTimes}}</text>
-                <text>次</text>
+                <text>段</text>
             </view>
         </view>
         <view class="time-slider">
