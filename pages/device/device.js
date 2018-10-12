@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        leftTimes: 10,
+        leftTimes: 15,
         deviceId: 1,
         activationPeriod: 1,
         bodyAnimation: {}
