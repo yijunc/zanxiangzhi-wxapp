@@ -22,7 +22,7 @@
                 <text>选择出纸：{{activationPeriod}}段</text>
             </view>
             <view class="body-view">
-                <slider bindchanging="onActivationChange" step="1" min="1" max="4" 
+                <slider bindchanging="onActivationChange" step="1" min="2" max="5" 
                 activeColor="#0A9EFF" block-size="23"/>
             </view>
         </view>
@@ -35,7 +35,7 @@
         <view class='body-footer-inner'>
             <view class='line'>纸盒机设备ID：{{deviceId}} （
                 <navigator url='/pages/device/report?id={{deviceId}}'>报修</navigator> ）</view>
-            <view class='line'>每位用户每日最多免费领取10次</view>
+            <view class='line'>每位用户每日最多免费领取15段</view>
             <view class='line'>温馨提醒：享受便利的同时，请您爱惜公共资源</view>
         </view>
     </view>

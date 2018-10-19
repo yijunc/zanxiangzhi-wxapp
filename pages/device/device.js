@@ -8,7 +8,7 @@ Page({
     data: {
         leftTimes: 15,
         deviceId: 1,
-        activationPeriod: 1,
+        activationPeriod: 2,
         bodyAnimation: {}
     },
 

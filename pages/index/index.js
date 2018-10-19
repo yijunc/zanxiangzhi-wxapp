@@ -102,7 +102,7 @@ Page({
                     showCancel: false
                 });
               }
-              console.log(ret);
+              // console.log(ret);
               var markerInfo = [];
               for (let it in ret.data.locations) {
                   let ititem = ret.data.locations[it];
